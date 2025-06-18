@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Fiscal Canarias - Best in Gran Canaria</title>
+    <meta name="description" content="Herramienta oficial de promoción de inversiones en Gran Canaria. Simuladores fiscales del REF canario y guías completas de incentivos.">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logos">
+                    <div class="logo">
+                        <h1 class="logo__text">SPEGC</h1>
+                        <span class="logo__subtitle">Best in Gran Canaria</span>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <button class="nav__toggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+                        <li><a href="#guias" class="nav__link">Guías</a></li>
+                        <li><a href="#simuladores" class="nav__link">Simuladores</a></li>
+                        <li><a href="#dashboard" class="nav__link">Dashboard</a></li>
+                        <li><a href="#noticias" class="nav__link">Noticias</a></li>
+                        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Landing Page -->
+        <section id="inicio" class="view active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Nexus Fiscal Canarias</h1>
+                        <p class="hero__subtitle">El mejor régimen fiscal de Europa te espera en Gran Canaria</p>
+                        <p class="hero__description">Descubre cómo optimizar tu estructura fiscal con los incentivos del REF canario. Simula, calcula y maximiza tu ahorro fiscal.</p>
+                        <div class="hero__actions">
+                            <button class="btn btn--primary btn--lg" onclick="app.showView('simuladores')">Comenzar Simulación</button>
+                            <button class="btn btn--outline btn--lg" onclick="app.showView('guias')">Ver Guías</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="advantages">
+                <div class="container">
+                    <h2 class="advantages__title">¿Por qué Gran Canaria?</h2>
+                    <div class="advantages__grid">
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🏛️</div>
+                            <h3>Mejor régimen fiscal de Europa</h3>
+                            <p>Sistema fiscal privilegiado con incentivos únicos</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🌍</div>
+                            <h3>Ubicación estratégica</h3>
+                            <p>Puente entre Europa, África y América</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🇪🇺</div>
+                            <h3>Territorio de la UE</h3>
+                            <p>Acceso total al mercado único europeo</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">✈️</div>
+                            <h3>Conectividad global</h3>
+                            <p>Hub aeroportuario y telecomunicaciones</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🏖️</div>
+                            <h3>Calidad de vida</h3>
+                            <p>Clima subtropical y entorno natural único</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-card__icon">🔬</div>
+                            <h3>Polo de I+D</h3>
+                            <p>Ecosistema innovador con incentivos mejorados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guías Educativas -->
+        <section id="guias" class="view">
+            <div class="container">
+                <div class="view__header">
+                    <h1>Guías de Incentivos Fiscales</h1>
+                    <p>Conoce en detalle cada incentivo del REF canario</p>
+                </div>
+                
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <h3>RIC - Reserva para Inversiones en Canarias</h3>
+                        <div class="guide-card__content">
+                            <p><strong>¿Qué es?</strong> El RIC es un incentivo fiscal que permite a las empresas canarias reducir hasta el 90% de sus beneficios no distribuidos, creando una reserva específica para futuras inversiones en el archipiélago.</p>
+                            <p><strong>Ventajas principales:</strong> Proporciona un ahorro fiscal inmediato mediante diferimiento tributario, permitiendo a las empresas reinvertir sus beneficios de manera más eficiente y planificada en el territorio canario.</p>
+                            <p><strong>Requisitos esenciales:</strong> La materialización de las inversiones debe realizarse en un plazo máximo de 3 años desde la constitución de la reserva, y dichas inversiones deben mantenerse durante un período mínimo de 5 años.</p>
+                            <p><strong>Marco normativo:</strong> Regulado por el artículo 27 de la Ley 19/1994, del Régimen Económico y Fiscal de Canarias, garantizando seguridad jurídica y estabilidad normativa.</p>
+                        </div>
+                        <button class="btn btn--primary" onclick="app.showCalculator('ric')">Simular RIC</button>
+                    </article>
+
+                    <article class="guide-card">
+                        <h3>DIC - Deducción por Inversiones en Canarias</h3>
+                        <div class="guide-card__content">
+                            <p><strong>¿Qué es?</strong> La DIC es una deducción del 25% sobre las inversiones realizadas en activos fijos nuevos situados en Canarias, aplicable directamente a la cuota íntegra del Impuesto sobre Sociedades.</p>
+                            <p><strong>Ventajas principales:</strong> Compatible con otros incentivos fiscales del REF, ofrece aplicación directa sobre la cuota tributaria, maximizando el beneficio fiscal de las inversiones empresariales.</p>
+                            <p><strong>Requisitos esenciales:</strong> Los activos deben ser nuevos, estar afectos a la actividad económica, localizarse en Canarias y mantenerse durante un período mínimo de 5 años consecutivos.</p>
+                            <p><strong>Marco normativo:</strong> Establecido en el artículo 94.1.b de la Ley 20/1991, proporcionando un marco estable y predecible para la planificación de inversiones.</p>
+                        </div>
+                        <button class="btn btn--primary" onclick="app.showCalculator('dic')">Simular DIC</button>
+                    </article>
+
+                    <article class="guide-card">
+                        <h3>I+D+i - Incentivos de Investigación y Desarrollo</h3>
+                        <div class="guide-card__content">
+                            <p><strong>¿Qué es?</strong> Sistema de deducciones mejoradas para actividades de investigación, desarrollo e innovación, con porcentajes superiores a los del régimen general: 45% gastos generales y hasta 75,6% para gastos incrementales.</p>
+                            <p><strong>Ventajas principales:</strong> Límites de aplicación ampliados (60% general, 90% islas menores), incentivando especialmente la I+D+i como motor de desarrollo económico y transformación digital del archipiélago.</p>
+                            <p><strong>Requisitos esenciales:</strong> Las actividades deben estar debidamente documentadas y calificadas como I+D+i, cumpliendo con los criterios técnicos establecidos por la normativa fiscal y de innovación.</p>
+                            <p><strong>Marco normativo:</strong> Basado en los artículos 35-36 de la LIS con los incrementos específicos del REF, garantizando un tratamiento fiscal preferente para la innovación.</p>
+                        </div>
+                        <button class="btn btn--primary" onclick="app.showCalculator('idi')">Simular I+D+i</button>
+                    </article>
+
+                    <article class="guide-card">
+                        <h3>ZEC - Zona Especial Canaria</h3>
+                        <div class="guide-card__content">
+                            <p><strong>¿Qué es?</strong> Régimen tributario especial que permite a las entidades ZEC tributar a un tipo reducido del 4% en el Impuesto sobre Sociedades, convirtiéndose en una de las fiscalidades más competitivas de Europa.</p>
+                            <p><strong>Ventajas principales:</strong> Tributación ultra-reducida que permite a las empresas elegibles maximizar su rentabilidad y competitividad, especialmente en sectores estratégicos y de alta tecnología.</p>
+                            <p><strong>Requisitos esenciales:</strong> Inversión mínima (100.000€ en capitalinas, 50.000€ en otras islas), creación de empleo (5 empleados en capitalinas, 3 en otras) y ejercicio de actividades permitidas por la normativa ZEC.</p>
+                            <p><strong>Marco normativo:</strong> Regulado por los artículos 28 y siguientes de la Ley 19/1994, con más de 25 años de experiencia y miles de empresas beneficiarias.</p>
+                        </div>
+                        <button class="btn btn--secondary">Más información ZEC</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simuladores -->
+        <section id="simuladores" class="view">
+            <div class="container">
+                <div class="simulators-layout">
+                    <aside class="sidebar">
+                        <h3>Herramientas Fiscales</h3>
+                        <nav class="calculator-nav">
+                            <button class="calculator-nav__item active" data-calculator="ric">
+                                <span class="calculator-nav__icon">💰</span>
+                                <span>RIC</span>
+                            </button>
+                            <button class="calculator-nav__item" data-calculator="dic">
+                                <span class="calculator-nav__icon">🏭</span>
+                                <span>DIC</span>
+                            </button>
+                            <button class="calculator-nav__item" data-calculator="idi">
+                                <span class="calculator-nav__icon">🔬</span>
+                                <span>I+D+i</span>
+                            </button>
+                            <button class="calculator-nav__item" data-calculator="audiovisual">
+                                <span class="calculator-nav__icon">🎬</span>
+                                <span>Audiovisual</span>
+                            </button>
+                        </nav>
+                    </aside>
+
+                    <div class="calculator-container">
+                        <!-- RIC Calculator -->
+                        <div id="calc-ric" class="calculator active">
+                            <h2>Simulador RIC - Reserva para Inversiones</h2>
+                            <div class="calculator__form">
+                                <div class="form-group">
+                                    <label class="form-label">Beneficio antes de impuestos (€)</label>
+                                    <input type="number" class="form-control" id="ric-beneficio" placeholder="Ej: 1000000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Porcentaje de reserva (%)</label>
+                                    <input type="range" class="form-control range-slider" id="ric-porcentaje" min="0" max="90" value="90">
+                                    <span class="range-value">90%</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Tipo impositivo (%)</label>
+                                    <input type="number" class="form-control" id="ric-tipo" value="25" min="15" max="30">
+                                </div>
+                                <button class="btn btn--primary btn--full-width" onclick="app.calculateRIC()">Calcular RIC</button>
+                            </div>
+                            <div id="ric-results" class="results hidden"></div>
+                        </div>
+
+                        <!-- DIC Calculator -->
+                        <div id="calc-dic" class="calculator">
+                            <h2>Simulador DIC - Deducción por Inversiones</h2>
+                            <div class="calculator__form">
+                                <div class="form-group">
+                                    <label class="form-label">Inversión en activos fijos (€)</label>
+                                    <input type="number" class="form-control" id="dic-inversion" placeholder="Ej: 500000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Cuota íntegra del IS (€)</label>
+                                    <input type="number" class="form-control" id="dic-cuota" placeholder="Ej: 250000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Otras deducciones aplicadas (€)</label>
+                                    <input type="number" class="form-control" id="dic-otras" value="0">
+                                </div>
+                                <button class="btn btn--primary btn--full-width" onclick="app.calculateDIC()">Calcular DIC</button>
+                            </div>
+                            <div id="dic-results" class="results hidden"></div>
+                        </div>
+
+                        <!-- I+D+i Calculator -->
+                        <div id="calc-idi" class="calculator">
+                            <h2>Simulador I+D+i - Investigación y Desarrollo</h2>
+                            <div class="calculator__form">
+                                <div class="form-group">
+                                    <label class="form-label">Gastos I+D generales (€)</label>
+                                    <input type="number" class="form-control" id="idi-gastos-generales" placeholder="Ej: 300000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Gastos I+D incrementales (€)</label>
+                                    <input type="number" class="form-control" id="idi-gastos-incrementales" placeholder="Ej: 100000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Gastos de innovación (€)</label>
+                                    <input type="number" class="form-control" id="idi-innovacion" placeholder="Ej: 50000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Cuota íntegra del IS (€)</label>
+                                    <input type="number" class="form-control" id="idi-cuota" placeholder="Ej: 400000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Ubicación</label>
+                                    <select class="form-control" id="idi-ubicacion">
+                                        <option value="general">Islas capitalinas</option>
+                                        <option value="menores">Islas menores</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn--primary btn--full-width" onclick="app.calculateIDI()">Calcular I+D+i</button>
+                            </div>
+                            <div id="idi-results" class="results hidden"></div>
+                        </div>
+
+                        <!-- Audiovisual Calculator -->
+                        <div id="calc-audiovisual" class="calculator">
+                            <h2>Simulador Audiovisual - Producciones</h2>
+                            <div class="calculator__form">
+                                <div class="form-group">
+                                    <label class="form-label">Tipo de producción</label>
+                                    <select class="form-control" id="audiovisual-tipo">
+                                        <option value="española">Producción española</option>
+                                        <option value="extranjera">Producción extranjera</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Coste total de producción (€)</label>
+                                    <input type="number" class="form-control" id="audiovisual-coste" placeholder="Ej: 2000000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Cuota íntegra del IS (€)</label>
+                                    <input type="number" class="form-control" id="audiovisual-cuota" placeholder="Ej: 500000">
+                                </div>
+                                <button class="btn btn--primary btn--full-width" onclick="app.calculateAudiovisual()">Calcular Audiovisual</button>
+                            </div>
+                            <div id="audiovisual-results" class="results hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Integrado -->
+        <section id="dashboard" class="view">
+            <div class="container">
+                <div class="view__header">
+                    <h1>Dashboard Fiscal Integrado</h1>
+                    <p>Combina incentivos y optimiza tu estrategia fiscal</p>
+                </div>
+
+                <div class="dashboard-layout">
+                    <div class="dashboard-config">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Configuración del Proyecto</h3>
+                                <div class="form-group">
+                                    <label class="form-label">Beneficio anual (€)</label>
+                                    <input type="number" class="form-control" id="dashboard-beneficio" placeholder="Ej: 2000000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Inversión planificada (€)</label>
+                                    <input type="number" class="form-control" id="dashboard-inversion" placeholder="Ej: 1000000">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Gastos I+D+i (€)</label>
+                                    <input type="number" class="form-control" id="dashboard-idi" placeholder="Ej: 300000">
+                                </div>
+                                
+                                <h4>Incentivos a aplicar</h4>
+                                <div class="incentive-checkboxes">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="dashboard-ric" checked>
+                                        <span>RIC - Reserva para Inversiones</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="dashboard-dic" checked>
+                                        <span>DIC - Deducción por Inversiones</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="dashboard-idi-check">
+                                        <span>I+D+i - Investigación y Desarrollo</span>
+                                    </label>
+                                </div>
+                                
+                                <button class="btn btn--primary btn--full-width" onclick="app.runIntegratedSimulation()">Calcular Escenario Óptimo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-results">
+                        <div id="dashboard-results-content" class="hidden">
+                            <div class="results-summary">
+                                <div class="summary-card">
+                                    <h4>Ahorro Fiscal Total</h4>
+                                    <div class="summary-value" id="total-ahorro">€0</div>
+                                </div>
+                                <div class="summary-card">
+                                    <h4>Efectividad Fiscal</h4>
+                                    <div class="summary-value" id="efectividad">0%</div>
+                                </div>
+                                <div class="summary-card">
+                                    <h4>Tipo Efectivo</h4>
+                                    <div class="summary-value" id="tipo-efectivo">0%</div>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="dashboard-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias -->
+        <section id="noticias" class="view">
+            <div class="container">
+                <div class="view__header">
+                    <h1>Actualidad Fiscal</h1>
+                    <p>Últimas novedades del REF canario</p>
+                </div>
+
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-card__content">
+                            <span class="news-card__category">Seguridad Jurídica</span>
+                            <h3>Seguridad Jurídica en el REF Canario: Por Qué Invertir en Gran Canaria es una Apuesta Segura</h3>
+                            <p>El Régimen Económico y Fiscal de Canarias cuenta con más de 30 años de historia y estabilidad normativa, avalada por la Unión Europea. Descubre por qué las inversiones en Gran Canaria ofrecen la máxima seguridad jurídica.</p>
+                            <div class="news-card__meta">
+                                <span>15 Junio 2025</span>
+                                <span>•</span>
+                                <span>5 min lectura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card__content">
+                            <span class="news-card__category">Caso de Éxito</span>
+                            <h3>Una Startup de IA en Gran Canaria Logra un Ahorro Fiscal del 85%</h3>
+                            <p>Conoce cómo una empresa de inteligencia artificial combinó los incentivos RIC, DIC e I+D+i para optimizar su estructura fiscal y acelerar su crecimiento internacional desde Gran Canaria.</p>
+                            <div class="news-card__meta">
+                                <span>12 Junio 2025</span>
+                                <span>•</span>
+                                <span>3 min lectura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-card__content">
+                            <span class="news-card__category">Transformación Digital</span>
+                            <h3>El Futuro es Azul y Digital: Gran Canaria se Consolida como Hub Tecnológico</h3>
+                            <p>La isla se posiciona como centro neurálgico de la innovación tecnológica en el Atlántico, con incentivos específicos para empresas digitales y un ecosistema en pleno crecimiento.</p>
+                            <div class="news-card__meta">
+                                <span>10 Junio 2025</span>
+                                <span>•</span>
+                                <span>4 min lectura</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="view">
+            <div class="container">
+                <div class="view__header">
+                    <h1>Contacto</h1>
+                    <p>Conecta con nuestro equipo de expertos fiscales</p>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>SPEGC - Sociedad de Promoción Económica de Gran Canaria</h3>
+                                <div class="contact-detail">
+                                    <strong>Iniciativa:</strong> Best in Gran Canaria
+                                </div>
+                                <div class="contact-detail">
+                                    <strong>Entidades colaboradoras:</strong> 14 organizaciones
+                                </div>
+                                <div class="contact-detail">
+                                    <strong>Servicios:</strong>
+                                    <ul>
+                                        <li>Asesoramiento fiscal especializado</li>
+                                        <li>Financiación de proyectos</li>
+                                        <li>Espacios empresariales</li>
+                                        <li>Formación y capacitación</li>
+                                        <li>Captación de talento</li>
+                                        <li>Incubación y aceleración</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Solicita Asesoramiento Personalizado</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-label">Nombre y apellidos</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Empresa</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Sector</label>
+                                        <select class="form-control">
+                                            <option>Selecciona un sector</option>
+                                            <option>Tecnología</option>
+                                            <option>I+D+i</option>
+                                            <option>Audiovisual</option>
+                                            <option>Servicios</option>
+                                            <option>Industrial</option>
+                                            <option>Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Consulta</label>
+                                        <textarea class="form-control" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn--primary btn--full-width">Enviar Consulta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Nexus Fiscal Canarias</h4>
+                    <p>Herramienta oficial de promoción de inversiones en Gran Canaria</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#guias">Guías</a></li>
+                        <li><a href="#simuladores">Simuladores</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Aviso Legal</a></li>
+                        <li><a href="#" target="_blank">Política de Privacidad</a></li>
+                        <li><a href="#" target="_blank">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>SPEGC</h4>
+                    <p>Best in Gran Canaria</p>
+                    <p>© 2025 Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
